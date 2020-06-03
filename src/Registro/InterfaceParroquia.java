@@ -1,12 +1,12 @@
 public interface InterfaceParroquia {
 
+    public void AddPrimero(Object elemento);
+
     public boolean Vacio();
 
-    public int Tamano();
+    public Object Obtener(int i);
 
-    public Object Agregar(Object elemento);
+    public void EliminarPrimero();
 
-    public Object Editar(Object elemento);
-
-    public Object Buscar(Object elemento);
+    public void Eliminar(int i);
 }

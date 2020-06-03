@@ -1,31 +1,40 @@
-public class Canton {
+public class Canton implements InterfaceParroquia {
 
     private NodoParroquia Cabeza;
 
-    private int size;
+    private int Tam;
 
     public Canton() {
     }
 
-    public Object AddPrimero(Object elemento) {
+    public void setCaeza(NodoParroquia n) {
+    }
+
+    public void setTam(int t) {
+    }
+
+    public NodoParroquia getCabeza() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public boolean Vacia() {
+    public int getTam() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public int Size() {
+    public void AddPrimero(Object elemento) {
+    }
+
+    public boolean Vacio() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public int Obtener(int i) {
+    public Object Obtener(int i) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     public void EliminarPrimero() {
     }
 
-    public void Eliminar() {
+    public void Eliminar(int i) {
     }
 }

@@ -2,7 +2,7 @@
 
 <ClassDiagram name="RegistroCovid">
   <ClassDiagramComponents>
-    <Class name="NodoParroquia" package="" visibility="public" xPosition="76.0" yPosition="272.0">
+    <Class name="NodoParroquia" package="" visibility="public" xPosition="82.0" yPosition="43.0">
       <Fields>
         <Field name="valor" type="Object" visibility="private"/>
         <Field name="sgte" type="NodoParroquia" visibility="private"/>
@@ -13,43 +13,41 @@
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="Vacio" returnType="boolean" visibility="public"/>
-        <Method name="Tamano" returnType="int" visibility="public"/>
-        <Method name="Agregar" returnType="Object" visibility="public">
-          <Argument type="Object" name="elemento"/>
-        </Method>
-        <Method name="Editar" returnType="Object" visibility="public">
-          <Argument type="Object" name="elemento"/>
-        </Method>
-        <Method name="Buscar" returnType="Object" visibility="public">
-          <Argument type="Object" name="elemento"/>
-        </Method>
-        <Method name="EnlazarSiguiente" returnType="NodoParroquia" visibility="public">
+        <Method name="EnlazarSiguiente" returnType="void" visibility="public">
           <Argument type="NodoParroquia" name="n"/>
         </Method>
-        <Method name="EnlazarSiguiente" returnType="NodoParroquia" visibility="public"/>
+        <Method name="ObtenerSiguiente" returnType="Nodo" visibility="public"/>
         <Method name="ObtenerValor" returnType="Object" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Canton" package="" visibility="public" xPosition="117.0" yPosition="622.0">
+    <Class name="Canton" package="" visibility="public" xPosition="130.0" yPosition="515.0">
       <Fields>
         <Field name="Cabeza" type="NodoParroquia" visibility="private"/>
-        <Field name="size" type="int" visibility="private"/>
+        <Field name="Tam" type="int" visibility="private"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public"/>
       </Constructors>
       <Methods>
-        <Method name="AddPrimero" returnType="Object" visibility="public">
+        <Method name="setCaeza" returnType="void" visibility="public">
+          <Argument type="NodoParroquia" name="n"/>
+        </Method>
+        <Method name="setTam" returnType="void" visibility="public">
+          <Argument type="int" name="t"/>
+        </Method>
+        <Method name="getCabeza" returnType="NodoParroquia" visibility="public"/>
+        <Method name="getTam" returnType="int" visibility="public"/>
+        <Method name="AddPrimero" returnType="void" visibility="public">
           <Argument type="Object" name="elemento"/>
         </Method>
-        <Method name="Vacia" returnType="boolean" visibility="public"/>
-        <Method name="Size" returnType="int" visibility="public"/>
-        <Method name="Obtener" returnType="int" visibility="public">
+        <Method name="Vacio" returnType="boolean" visibility="public"/>
+        <Method name="Obtener" returnType="Object" visibility="public">
           <Argument type="int" name="i"/>
         </Method>
         <Method name="EliminarPrimero" returnType="void" visibility="public"/>
-        <Method name="Eliminar" returnType="void" visibility="public"/>
+        <Method name="Eliminar" returnType="void" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
       </Methods>
     </Class>
     <Class name="Parroquia" package="" visibility="public" xPosition="485.0" yPosition="25.0">
@@ -104,33 +102,33 @@
         <Method name="toString" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="MainRegistroCovid" package="" visibility="public" isStatic="true" xPosition="610.0" yPosition="698.0">
+    <Class name="MainRegistroCovid" package="" visibility="public" isStatic="true" xPosition="130.0" yPosition="337.0">
       <Fields/>
       <Constructors/>
       <Methods>
         <Method name="Main" returnType="void" visibility="public" isStatic="true"/>
       </Methods>
     </Class>
-    <Interface name="InterfaceParroquia" package="" visibility="public" xPosition="128.0" yPosition="25.0">
+    <Interface name="InterfaceParroquia" package="" visibility="public" xPosition="578.0" yPosition="587.0">
       <Methods>
+        <Method name="AddPrimero" returnType="void" visibility="public">
+          <Argument type="Object" name="elemento"/>
+        </Method>
         <Method name="Vacio" returnType="boolean" visibility="public"/>
-        <Method name="Tamano" returnType="int" visibility="public"/>
-        <Method name="Agregar" returnType="Object" visibility="public">
-          <Argument type="Object" name="elemento"/>
+        <Method name="Obtener" returnType="Object" visibility="public">
+          <Argument type="int" name="i"/>
         </Method>
-        <Method name="Editar" returnType="Object" visibility="public">
-          <Argument type="Object" name="elemento"/>
-        </Method>
-        <Method name="Buscar" returnType="Object" visibility="public">
-          <Argument type="Object" name="elemento"/>
+        <Method name="EliminarPrimero" returnType="void" visibility="public"/>
+        <Method name="Eliminar" returnType="void" visibility="public">
+          <Argument type="int" name="i"/>
         </Method>
       </Methods>
     </Interface>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <UseRelation name="Lista" source="MainRegistroCovid" target="Canton" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="NodoParroquia" target="InterfaceParroquia"/>
+    <UseRelation name="Nodo" source="MainRegistroCovid" target="NodoParroquia" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Canton" target="InterfaceParroquia"/>
     <UseRelation name="Parroquia" source="MainRegistroCovid" target="Parroquia" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="Nodo" source="Canton" target="NodoParroquia" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="Lista" source="MainRegistroCovid" target="Canton" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
