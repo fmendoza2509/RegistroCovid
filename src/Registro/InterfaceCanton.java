@@ -1,4 +1,5 @@
-public interface InterfaceParroquia {
+package registro;
+public interface InterfaceCanton {
 
     public void AddPrimero(Object elemento);
 

@@ -1,3 +1,4 @@
+package registro;
 public class NodoParroquia {
 
     private Object valor;
@@ -10,7 +11,7 @@ public class NodoParroquia {
     public void EnlazarSiguiente(NodoParroquia n) {
     }
 
-    public Nodo ObtenerSiguiente() {
+    public NodoParroquia ObtenerSiguiente() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 

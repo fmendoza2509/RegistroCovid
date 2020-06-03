@@ -1,7 +1,7 @@
-public class Canton implements InterfaceParroquia {
+package registro;
+public class Canton implements InterfaceCanton {
 
     private NodoParroquia Cabeza;
-
     private int Tam;
 
     public Canton() {

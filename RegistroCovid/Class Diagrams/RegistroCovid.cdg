@@ -13,10 +13,10 @@
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="EnlazarSiguiente" returnType="void" visibility="public">
+        <Method name="EnlazarSiguiente" returnType="NodoParroquia" visibility="public">
           <Argument type="NodoParroquia" name="n"/>
         </Method>
-        <Method name="ObtenerSiguiente" returnType="Nodo" visibility="public"/>
+        <Method name="ObtenerSiguiente" returnType="NodoParroquia" visibility="public"/>
         <Method name="ObtenerValor" returnType="Object" visibility="public"/>
       </Methods>
     </Class>
@@ -29,28 +29,28 @@
         <Constructor visibility="public"/>
       </Constructors>
       <Methods>
-        <Method name="setCaeza" returnType="void" visibility="public">
+        <Method name="setCaeza" returnType="NodoParroquia" visibility="public">
           <Argument type="NodoParroquia" name="n"/>
         </Method>
-        <Method name="setTam" returnType="void" visibility="public">
+        <Method name="setTam" returnType="int" visibility="public">
           <Argument type="int" name="t"/>
         </Method>
         <Method name="getCabeza" returnType="NodoParroquia" visibility="public"/>
         <Method name="getTam" returnType="int" visibility="public"/>
-        <Method name="AddPrimero" returnType="void" visibility="public">
+        <Method name="AddPrimero" returnType="Object" visibility="public">
           <Argument type="Object" name="elemento"/>
         </Method>
         <Method name="Vacio" returnType="boolean" visibility="public"/>
-        <Method name="Obtener" returnType="Object" visibility="public">
+        <Method name="Obtener" returnType="int" visibility="public">
           <Argument type="int" name="i"/>
         </Method>
         <Method name="EliminarPrimero" returnType="void" visibility="public"/>
-        <Method name="Eliminar" returnType="void" visibility="public">
+        <Method name="Eliminar" returnType="int" visibility="public">
           <Argument type="int" name="i"/>
         </Method>
       </Methods>
     </Class>
-    <Class name="Parroquia" package="" visibility="public" xPosition="485.0" yPosition="25.0">
+    <Class name="Parroquia" package="" visibility="public" xPosition="491.0" yPosition="14.0">
       <Fields>
         <Field name="NonmbParroquia" type="String" visibility="private"/>
         <Field name="NumContagiados" type="int" visibility="private"/>
@@ -70,27 +70,30 @@
           <Argument type="int" name="ntp"/>
           <Argument type="int" name="nrecup"/>
         </Constructor>
+        <Constructor visibility="public"/>
       </Constructors>
       <Methods>
-        <Method name="setContagio" returnType="void" visibility="public">
+        <Method name="setContagio" returnType="int" visibility="public">
           <Argument type="int" name="n"/>
         </Method>
-        <Method name="setParroquia" returnType="void" visibility="public">
+        <Method name="setParroquia" returnType="String" visibility="public">
           <Argument type="String" name="par"/>
         </Method>
-        <Method name="setDecesos" returnType="void" visibility="public">
+        <Method name="setDecesos" returnType="int" visibility="public">
           <Argument type="int" name="n"/>
         </Method>
-        <Method name="setHospitalizados" returnType="void" visibility="public">
+        <Method name="setHospitalizados" returnType="int" visibility="public">
           <Argument type="int" name="n"/>
         </Method>
-        <Method name="setDescartados" returnType="void" visibility="public">
+        <Method name="setDescartados" returnType="int" visibility="public">
           <Argument type="int" name="n"/>
         </Method>
-        <Method name="setTotalPruebas" returnType="void" visibility="public">
+        <Method name="setTotalPruebas" returnType="int" visibility="public">
           <Argument type="int" name="n"/>
         </Method>
-        <Method name="setRecuperados" returnType="void" visibility="public"/>
+        <Method name="setRecuperados" returnType="void" visibility="public">
+          <Argument type="int" name="n"/>
+        </Method>
         <Method name="getParroquia" returnType="String" visibility="public"/>
         <Method name="getContagios" returnType="int" visibility="public"/>
         <Method name="getDecesos" returnType="int" visibility="public"/>
@@ -109,17 +112,17 @@
         <Method name="Main" returnType="void" visibility="public" isStatic="true"/>
       </Methods>
     </Class>
-    <Interface name="InterfaceParroquia" package="" visibility="public" xPosition="578.0" yPosition="587.0">
+    <Interface name="InterfaceCanton" package="" visibility="public" xPosition="578.0" yPosition="587.0">
       <Methods>
-        <Method name="AddPrimero" returnType="void" visibility="public">
+        <Method name="AddPrimero" returnType="Object" visibility="public">
           <Argument type="Object" name="elemento"/>
         </Method>
         <Method name="Vacio" returnType="boolean" visibility="public"/>
-        <Method name="Obtener" returnType="Object" visibility="public">
+        <Method name="Obtener" returnType="int" visibility="public">
           <Argument type="int" name="i"/>
         </Method>
         <Method name="EliminarPrimero" returnType="void" visibility="public"/>
-        <Method name="Eliminar" returnType="void" visibility="public">
+        <Method name="Eliminar" returnType="int" visibility="public">
           <Argument type="int" name="i"/>
         </Method>
       </Methods>
@@ -127,7 +130,7 @@
   </ClassDiagramComponents>
   <ClassDiagramRelations>
     <UseRelation name="Nodo" source="MainRegistroCovid" target="NodoParroquia" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Canton" target="InterfaceParroquia"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Canton" target="InterfaceCanton"/>
     <UseRelation name="Parroquia" source="MainRegistroCovid" target="Parroquia" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation name="Lista" source="MainRegistroCovid" target="Canton" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
