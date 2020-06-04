@@ -88,4 +88,11 @@ public class Canton implements InterfaceCanton {
         }
         Tam--;
     }
+    //Método para imprimir
+    @Override
+    public void Imprimir(){
+        for(int i=0;i<getTam();i++){
+            System.out.println(Obtener(i));
+        }
+    }
 }
