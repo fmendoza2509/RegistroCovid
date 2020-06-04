@@ -6,6 +6,8 @@ public class MainRegistroCovid {
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
         String NombreCanton="";
+        Parroquia oParr = new Parroquia();
+        Canton oCant = new Canton();
         int nContagiados,nDecesos,nHospitalizados,nDescartados,nRecuperados,nTPruebas,op;
         nContagiados=nDecesos=nHospitalizados=nDescartados=nRecuperados=nTPruebas=op=0;
         System.out.println("Ingrese el nombre del canton");
@@ -20,10 +22,26 @@ public class MainRegistroCovid {
                 op = lector.nextInt();
                 switch(op){
                     case 1:
+                        oParr.Leer();
+                        nContagiados = nContagiados + oParr.getContagios();
+                        nHospitalizados = nHospitalizados + oParr.getHospitalizados();
+                        nRecuperados = nRecuperados + oParr.getRecuperados();
+                        nDecesos = nDecesos + oParr.getDecesos();
+                        nDescartados =  nDescartados + oParr.getDescartados();
+                        nTPruebas = nTPruebas + oParr.getTotalPruebas();
+                        oCant.AddPrimero(oParr);
                     break;
                     case 2:
+                        oCant.Imprimir();
                     break;
                     case 3:
+                        System.out.println("Cantón: "+NombreCanton);
+                        System.out.println("Número de personas contagiadas: "+nContagiados);
+                        System.out.println("Número de personas hospitalizadas: "+nHospitalizados);
+                        System.out.println("Número de personas recuperadas: "+nRecuperados);
+                        System.out.println("Número de personas fallecidas: "+nDecesos);
+                        System.out.println("Número de personas descartadas: "+nDescartados);
+                        System.out.println("Número total de pruebas: "+nTPruebas);
                     break;
                 }
             }while((op>0)&&(op<5));
