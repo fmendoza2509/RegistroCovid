@@ -30,40 +30,47 @@ public class Parroquia {
     }
     //Métodos setters
     public void setContagio(int n) {
+        NumContagiados=n;
     }
     public void setParroquia(String par) {
+        NonmbParroquia=par;
     }
     public void setDecesos(int n) {
+        NumDecesos=n;
     }
     public void setHospitalizados(int n) {
+        NumHospitalizados=n;
     }
     public void setDescartados(int n) {
+        NumDescartados=n;
     }
     public void setTotalPruebas(int n) {
+        NumTotalPruebas=n;
     }
     public void setRecuperados(int n) {
+        NumRecuperados=n;
     }
     //Métodos Getters
     public String getParroquia() {
-        
+     return NonmbParroquia;   
     }
     public int getContagios() {
-        
+     return NumContagiados;   
     }
     public int getDecesos() {
-        
+     return NumDecesos;   
     }
     public int getHospitalizados() {
-        
+     return NumHospitalizados;   
     }
     public int getDescartados() {
-        
+    return NumDescartados;    
     }
     public int getTotalPruebas() {
-        
+     return NumTotalPruebas;   
     }
     public int getRecuperados() {
-        
+    return NumRecuperados;    
     }
     //Método para leer los datos
     public void Leer() {
