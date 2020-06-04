@@ -1,5 +1,9 @@
 package registro;
+
+import java.util.Scanner;
+
 public class Parroquia {
+    private Scanner lector = new Scanner(System.in);
     //Declaramos las variables necesarias
     private String NonmbParroquia;
     private int NumContagiados;
@@ -74,12 +78,26 @@ public class Parroquia {
     }
     //Método para leer los datos
     public void Leer() {
+        System.out.println("Ingrese en nombre de la parroquia");
+        setParroquia(lector.nextLine());
+        System.out.println("Ingrese el número de contagiados");
+        setContagio(lector.nextInt());
+        System.out.println("Ingrese el número de fallecidos");
+        setDecesos(lector.nextInt());
+        System.out.println("Ingrese el número de hospitalizados");
+        setHospitalizados(lector.nextInt());
+        System.out.println("Ingrese el número de pacientes recuperados");
+        setRecuperados(lector.nextInt());
+        System.out.println("Ingrese el número de personas descartadas");
+        setDescartados(lector.nextInt());
+        System.out.println("Ingrese el número total de pruebas");
+        setTotalPruebas(lector.nextInt());
     }
     //Método para imprimir
     public String toString() {
-        return "Parroquia: "+getParroquia()+"\nNúmero de contagiados: "+getContagios()
+        return( "Parroquia: "+getParroquia()+"\nNúmero de contagiados: "+getContagios()
                 +"\nFallecidos: "+getDecesos()+"\nHospitalizados: "+getHospitalizados()
                 +"\nRecuperados: "+getRecuperados()+"\nCasos Descartados: "+getDescartados()
-                +"\nTotal de pruebas: "+getTotalPruebas();
+                +"\nTotal de pruebas: "+getTotalPruebas());
     }
 }

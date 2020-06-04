@@ -1,6 +1,6 @@
 package registro;
 public class MainRegistroCovid {
-
-    public static void Main() {
+    public static void main(String[] args) {
+        
     }
 }
