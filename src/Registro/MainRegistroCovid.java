@@ -6,7 +6,7 @@ public class MainRegistroCovid {
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
         String NombreCanton="";
-        Parroquia oParr = new Parroquia();
+        Casos oParr = new Casos();
         Canton oCant = new Canton();
         int nContagiados,nDecesos,nHospitalizados,nDescartados,nRecuperados,nTPruebas,op;
         nContagiados=nDecesos=nHospitalizados=nDescartados=nRecuperados=nTPruebas=op=0;

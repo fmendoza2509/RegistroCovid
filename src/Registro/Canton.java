@@ -4,7 +4,7 @@ public class Canton implements InterfaceCanton {
      *Creamos la cabeza de la lista referenciando*
      *al NodoParroquia                           *
      *********************************************/
-    private NodoParroquia Cabeza;
+    private Nodo Cabeza;
     /********************************************
      *Creamos una variable para ver el tamaño de* 
      *la lista enlazada                         *
@@ -16,7 +16,7 @@ public class Canton implements InterfaceCanton {
         setTam(0);
     }
 
-    public void setCabeza(NodoParroquia n) {
+    public void setCabeza(Nodo n) {
         Cabeza = n;
     }
 
@@ -24,7 +24,7 @@ public class Canton implements InterfaceCanton {
         Tam = t;
     }
 
-    public NodoParroquia getCabeza() {
+    public Nodo getCabeza() {
         return Cabeza;
     }
 
@@ -39,12 +39,12 @@ public class Canton implements InterfaceCanton {
          *y si lo está agregamos el elemento *
          *************************************/
         if(Cabeza==null){
-            Cabeza = new NodoParroquia(elemento);
+            Cabeza = new Nodo(elemento);
         }else {
              //Caso contrario, es decir no esta vacía
              //Creamos un nodo temporal que sea igual a la cabeza
-            NodoParroquia temp = Cabeza;
-            NodoParroquia nuevo = new NodoParroquia(elemento);//Cramos un nuevo objeto de la clase Nodo
+            Nodo temp = Cabeza;
+            Nodo nuevo = new Nodo(elemento);//Cramos un nuevo objeto de la clase Nodo
             nuevo.EnlazarSiguiente(temp);//Enlazamos el nuevo nodo temporal
             Cabeza = nuevo;//Hcemos el cambio de valores para que el nuevo nodo sea la cabeza
         }
@@ -59,7 +59,7 @@ public class Canton implements InterfaceCanton {
     @Override
     public Object Obtener(int i) {
         int contador = 0;
-        NodoParroquia temp = Cabeza;
+        Nodo temp = Cabeza;
         while(contador<i){
             temp = temp.ObtenerSiguiente();
             contador++;
@@ -76,7 +76,7 @@ public class Canton implements InterfaceCanton {
     @Override
     public void Eliminar(int i) {
         int contador = 0;
-        NodoParroquia temp = Cabeza;
+        Nodo temp = Cabeza;
         if(i==0){
             Cabeza = Cabeza.ObtenerSiguiente();
         }else {
